@@ -1,0 +1,67 @@
+{
+  "name": "react-vending-machine",
+  "version": "1.0.0",
+  "description": "a model of a vending machine using react.js",
+  "engines": {
+    "node": "9.3.0"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "karma start --singleRun",
+    "build": "webpack -p",
+    "prebuild": "npm run version && npm run test && npm run bundle",
+    "version": "node version-check.js",
+    "lint": "eslint . --ext .js --fix",
+    "dev": "npx webpack-dev-server --hot --progress --colors --debug --output-pathinfo",
+    "start": "node server.js",
+    "heroku-postbuild": "webpack -p",
+    "bundle": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bohandley/react-vending-machine.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "brendan ohandley",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bohandley/react-vending-machine/issues"
+  },
+  "homepage": "https://github.com/bohandley/react-vending-machine#readme",
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "create-react-class": "^15.6.3",
+    "css-loader": "^1.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "http-server": "^0.11.1",
+    "jasmine": "^3.1.0",
+    "karma": "^2.0.4",
+    "karma-commonjs": "^1.0.0",
+    "karma-webpack": "^3.0.0",
+    "node-sass": "^4.9.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "sass-loader": "^7.0.3",
+    "semver": "^5.5.0",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.14.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.0.1",
+    "eslint-plugin-react": "^7.10.0",
+    "file-loader": "^1.1.11",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.2",
+    "url-loader": "^1.0.1",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
